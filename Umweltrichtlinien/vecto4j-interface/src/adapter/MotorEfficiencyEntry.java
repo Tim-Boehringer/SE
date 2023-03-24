@@ -1,21 +1,13 @@
-package de.dhbw.ka.se2.vecto4j.input;
+package adapter;
 
 import java.io.Serializable;
 
-public class GearboxEfficienyEntry implements Serializable {
-	private static final long serialVersionUID = 3502508107842362019L;
+public class MotorEfficiencyEntry implements Serializable {
+	private static final long serialVersionUID = -427405415800247169L;
 
-	private int gear;
 	private int rotations;
+	private int torque;
 	private int loss;
-
-	public int getGear() {
-		return gear;
-	}
-
-	public void setGear(final int gear) {
-		this.gear = gear;
-	}
 
 	public int getRotations() {
 		return rotations;
@@ -23,6 +15,14 @@ public class GearboxEfficienyEntry implements Serializable {
 
 	public void setRotations(final int rotations) {
 		this.rotations = rotations;
+	}
+
+	public int getTorque() {
+		return torque;
+	}
+
+	public void setTorque(final int torque) {
+		this.torque = torque;
 	}
 
 	public int getLoss() {

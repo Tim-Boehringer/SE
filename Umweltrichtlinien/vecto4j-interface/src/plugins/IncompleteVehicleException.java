@@ -1,4 +1,4 @@
-package de.dhbw.ka.se2.vecto4j;
+package plugins;
 
 /**
  * Wird geworfen, wenn die Eingabedaten unvollständig sind.

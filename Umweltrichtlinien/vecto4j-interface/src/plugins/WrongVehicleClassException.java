@@ -1,4 +1,4 @@
-package de.dhbw.ka.se2.vecto4j;
+package plugins;
 
 /**
  * Wird geworfen, wenn das Fahrzeug in eine nicht deklarationspflichtigen Fahrzeugklasse zugeordnet wird.

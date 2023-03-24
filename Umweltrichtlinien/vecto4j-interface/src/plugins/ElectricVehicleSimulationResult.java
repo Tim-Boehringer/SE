@@ -1,4 +1,4 @@
-package de.dhbw.ka.se2.vecto4j.output;
+package plugins;
 
 import java.io.Serializable;
 import java.util.List;

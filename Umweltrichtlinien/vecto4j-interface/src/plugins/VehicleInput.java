@@ -1,7 +1,14 @@
-package de.dhbw.ka.se2.vecto4j.input;
+package plugins;
 
 import java.io.Serializable;
 import java.util.List;
+
+import adapter.Airdrag;
+import adapter.Axle;
+import adapter.Battery;
+import adapter.Gearbox;
+import adapter.Motor;
+import adapter.VehicleType;
 
 /**
  * Eingabedaten des Fahrzeugs.

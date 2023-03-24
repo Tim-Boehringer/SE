@@ -1,7 +1,4 @@
-package de.dhbw.ka.se2.vecto4j;
-
-import de.dhbw.ka.se2.vecto4j.input.VehicleInput;
-import de.dhbw.ka.se2.vecto4j.output.ElectricVehicleSimulationResult;
+package plugins;
 
 /**
  * Mock einer Simulation für CO2 Werte von schweren Nutzfahrzeugen. Erstellt für

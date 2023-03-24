@@ -1,4 +1,4 @@
-package de.dhbw.ka.se2.vecto4j.input;
+package adapter;
 
 /**
  * Fahzeugtyp
