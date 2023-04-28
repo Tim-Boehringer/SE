@@ -3,16 +3,16 @@ package de.dhbw.ka.se2.application.vecto;
 import java.util.List;
 
 import de.dhbw.ka.se2.adapter.vehicledata.VehicleComponentDecoder;
-import de.dhbw.ka.se2.domain.logistics.VehicleWeights;
 import de.dhbw.ka.se2.domain.print.FullVehicle;
 import de.dhbw.ka.se2.domain.print.VehicleConfiguration;
 import de.dhbw.ka.se2.domain.vehicledata.VehicleComponent;
 import de.dhbw.ka.se2.plugin.vehicle.VehicleClient;
-import de.dhbw.ka.se2.application.vecto.VehicleWeightsClient;
 import de.dhbw.ka.se2.vecto4j.input.VehicleInput;
 import de.dhbw.ka.se2.vecto4j.input.VehicleType;
 import de.dhbw.ka.se2.vecto4j.Simulator;
 import de.dhbw.ka.se2.vecto4j.output.ElectricVehicleSimulationResult;
+import de.dhbw.ka.se2.vecto4j.IncompleteVehicleException;
+import de.dhbw.ka.se2.vecto4j.WrongVehicleClassException;
 
 
 public class Co2SimulationProcess {
@@ -22,11 +22,13 @@ public class Co2SimulationProcess {
         this.weightsAccess = weightsAccess;
         this.simulator = simulator;
     }
-    public ElectricVehiclesSimulationResult simulateVehicle (final FullVehicle vehicle){
+    public ElectricVehicleSimulationResult simulateVehicle (final FullVehicle vehicle) throws IncompleteVehicleException, WrongVehicleClassException{
         VehicleInput input = getInputForVehicle(vehicle);
         enrichInputWithComponents(vehicle.getConfig(), input);
         enrichInputWithWeights(vehicle.getConfig(), input);
+        
         return simulator.calculateVehicle(input);
+       
     }
     public VehicleInput getInputForVehicle(final FullVehicle vehicle){
         VehicleInput input = new VehicleInput();
