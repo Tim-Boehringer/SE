@@ -32,7 +32,7 @@ Das System hat mehrere Schnittstellen innerhalb einer Schicht für den Datenaust
 
 Chosen option: Trennung der APIs, because -Anpassungen können unabhängig voneinander durchgeführt werden
 
--Neue Schnittstellen können der Schicht einfacher hinzugefügt werden
+-Neue Schnittstellen können der Schicht einfacher hinzugefügt werden 
 
 -Clean Code kompatibel
 
